@@ -1,0 +1,9 @@
+create database projeto_individual;
+use projeto_individual;
+create table usuarios (
+idlogin int primary key auto_increment,
+login varchar(30),
+senha varchar(30));
+
+insert into usuarios values 
+(null, 'admin', 'bandtec');

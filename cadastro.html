@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="../public/css/cadastro.css">
+</head>
+
+<body>
+    <div class="login">
+        <form class="div_conteudo" id="form_login" method="post" onsubmit="return entrar()">
+            </label>
+            <label class="txt_ipt">Nome:
+                <input class="ipt" type="text" name="name" placeholder="nome completo">
+                <br>
+                <span id="nome">Nome completo</span>
+                <br>
+            </label><br>
+            
+            <label class="txt_ipt">e-mail:
+                <input class="ipt" type="text" name="email" placeholder="nome completo">
+                <br>
+                <span id="email"> insira o email corretamente</span>
+                <br>
+            </label><br>
+
+            <label class="txt_ipt">usuario:
+                <input class="ipt" type="text" name="login" placeholder="Insira seu login">
+                <br>
+                <span id="name">deve conter 6 digitos</span>
+                <br>
+            </label><br>
+
+            <label class="txt_ipt">Senha:
+                <input class="ipt" type="password" name="senha" placeholder="Informe sua senha">
+                <br>
+                <span id="senha">senha deve conter letra maiscula</span>
+                <br>
+            </label><br>
+
+            <label class="txt_ipt">repitir a senha:
+                <input class="ipt" type="password" name="senha" placeholder="Informe sua senha">
+                <br>
+                <span id="re_senha">Senha Incorreta</span>
+                <br>
+            </label>
+            <button class="btn_cadastrar" id="btn_entrar" type="submit">Cadastrar</button>
+            <br>
+        </form>
+    </div>
+</body>
+
+</html>

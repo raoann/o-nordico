@@ -1,0 +1,216 @@
+body {
+    margin: 0; /*retirada de margin padrão das tag*/
+    padding: 0; /*retirada de espassamento padrão das tags*/
+    border: 0; /*serve para retirar as bordas das tags impostas no codigo*/ 
+    font-family: 'Times New Roman', Times, serif; /* fonte utilizada em todo site*/
+    background-image: url("../imagem/fundo_login.jpg");
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @font-face {
+    font-family: Titulo;
+    src: url(../PR\Viking.ttf)
+  }
+  @font-face {
+    font-family: sub_titulo;
+    src: url(../NordicaHairline.otf)
+  }
+  @keyframes surgir{
+    0%{
+        margin-top: 0px;
+        opacity: 0%;
+    }
+    100%{
+        margin-top: 8%;
+        opacity: 0.9;
+    }
+}
+
+  .logo{
+    width: 70px;
+    height: 55px;
+    margin: 17px auto;
+    float: center;
+    padding-left: 4%;
+    padding: auto;
+    opacity: 100%;
+  }
+  
+  .li_login{
+    transform: translate(120%,0%);
+    background: #3D94F6;
+    background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: linear-gradient(to bottom, #3D94F6, #1E62D0);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    height: 35px;
+    width: 100px !important;
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 17px;
+    box-shadow: 1px 1px 20px 0px #0059A0;
+    -webkit-box-shadow: 1px 1px 20px 0px #0059A0;
+    -moz-box-shadow: 1px 1px 20px 0px #0059A0;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #0059A0 1px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    
+  }
+  .li_cadastro{
+    transform: translate(140%,0%);
+    background: #3D94F6;
+    background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: linear-gradient(to bottom, #3D94F6, #1E62D0);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    height: 35px;
+    width: 100px !important;
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 17px;
+    box-shadow: 1px 1px 20px 0px #0059A0;
+    -webkit-box-shadow: 1px 1px 20px 0px #0059A0;
+    -moz-box-shadow: 1px 1px 20px 0px #0059A0;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #0059A0 1px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  .li_login:hover{
+    border: solid #337FED 1px;
+    background: #1E62D0;
+    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  .li_cadastro:hover{
+    border: solid #337FED 1px;
+    background: #1E62D0;
+    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  
+    .login {
+    width: 36%;
+    margin-left: 32%;
+    margin-top: 8%;
+    animation-name: surgir;
+    animation-duration: 2s;
+    background-color: #000000;
+    position: absolute;
+    opacity: 0.9;
+    margin-bottom: 5%;
+    border-radius: 0%;
+    display: flex;
+    border-radius: 10%;
+  }
+
+  .div_conteudo{
+    margin:14%;
+    line-break: auto;
+    color: rgb(6, 153, 146);
+    text-shadow: 1px 1px black;
+}
+.logo_form{
+    height: 90px;
+    margin-top: -30px;
+    margin-left: 115px;
+    box-sizing: border-box;
+    position: relative;
+}
+.txt_ipt{
+    margin-left:43%;
+    margin-bottom: 10%;
+    font-family: sub_titulo;
+    font-size: 100%;
+    color:white;
+    width:100%;
+    height:40px;
+    font-size: 20px;
+    opacity: 100%;
+}
+.ipt{
+    margin-bottom: 4%;
+    height: 19%;
+    width: 100%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    font-size: 100%;
+    opacity: 100%;
+}
+
+.btn_ent{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    transform: translate(140%,0%);
+    background: #3D94F6;
+    background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: linear-gradient(to bottom, #3D94F6, #1E62D0);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    height: 35px;
+    width: 100px !important;
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 17px;
+    box-shadow: 1px 1px 20px 0px #0059A0;
+    -webkit-box-shadow: 1px 1px 20px 0px #0059A0;
+    -moz-box-shadow: 1px 1px 20px 0px #0059A0;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #0059A0 1px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    opacity: 100%;
+}
+.btn_ent:hover{
+    border: solid #337FED 1px;
+    background: #1E62D0;
+    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    opacity: 100%;
+}
+
+.link-cadastro{
+    margin-top: 30%;
+    margin-left: 22%;
+    font-family: Verdana;
+    color: skyblue;
+}
