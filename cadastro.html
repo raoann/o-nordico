@@ -1,55 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="./imagem/logo.png" />
+    <link rel="stylesheet" href="./css/cadastro.css">
     <title>Cadastrar</title>
-    <link rel="stylesheet" href="../public/css/cadastro.css">
 </head>
-
 <body>
     <div class="login">
-        <form class="div_conteudo" id="form_login" method="post" onsubmit="return entrar()">
-            </label>
-            <label class="txt_ipt">Nome:
-                <input class="ipt" type="text" name="name" placeholder="nome completo">
-                <br>
-                <span id="nome">Nome completo</span>
-                <br>
-            </label><br>
-            
-            <label class="txt_ipt">e-mail:
-                <input class="ipt" type="text" name="email" placeholder="nome completo">
-                <br>
-                <span id="email"> insira o email corretamente</span>
-                <br>
-            </label><br>
-
-            <label class="txt_ipt">usuario:
-                <input class="ipt" type="text" name="login" placeholder="Insira seu login">
-                <br>
-                <span id="name">deve conter 6 digitos</span>
-                <br>
-            </label><br>
-
-            <label class="txt_ipt">Senha:
-                <input class="ipt" type="password" name="senha" placeholder="Informe sua senha">
-                <br>
-                <span id="senha">senha deve conter letra maiscula</span>
-                <br>
-            </label><br>
-
-            <label class="txt_ipt">repitir a senha:
-                <input class="ipt" type="password" name="senha" placeholder="Informe sua senha">
-                <br>
-                <span id="re_senha">Senha Incorreta</span>
-                <br>
-            </label>
-            <button class="btn_cadastrar" id="btn_entrar" type="submit">Cadastrar</button>
-            <br>
+        <form class="logo_form" id="form_cadastro" method="post" onsubmit="return cadastrar()">
+            <h1>Crie uma conta</h1>
+            <br>Login:<br>
+            <input type="text" class="ipt" name="nome" placeholder="Nome" required minlength="4">
+            <br><br>Usuario:<br>
+            <input type="text" class="ipt" name="login" placeholder="Nome de Usuário" required minlength="4">
+            <br><br>Senha:<br>
+            <input type="password" class="ipt" name="senha" placeholder="Senha" required minlength="4">
+            <br><br>
+            <button id="btn_entrar" class="btn_cadastrar">Cadastrar</button>
         </form>
+        
+        <span class="recuperar"> Já tem uma conta? <a href="index.html"><b>Clique aqui</b></a></span>
+        <br>
     </div>
 </body>
-
 </html>
+<script>
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+                alert('Cadastrado!');
+                window.location.href = 'index.html';
+
+            } else {
+
+                alert('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+</script>
